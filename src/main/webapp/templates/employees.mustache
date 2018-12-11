@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Internet Shop</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid #999;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2>Employees</h2>
+<table>
+    <tr>
+        <th>Emp Id</th>
+        <th>F Name</th>
+        <th>M Name</th>
+        <th>L Name</th>
+        <th>Post</th>
+        <th>Salary</th>
+        <th>Prior Salary</th>
+    </tr>
+
+    {{#employees}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{fName}}</td>
+            <td>{{mName}}</td>
+            <td>{{lName}}</td>
+            <td>{{post}}</td>
+            <td>{{salary}}</td>
+            <td>{{priorSalary}}</td>
+        </tr>
+    {{/employees}}
+
+</table>
+</body>
+</html>

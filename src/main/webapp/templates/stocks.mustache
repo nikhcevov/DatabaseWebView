@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Internet Shop</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid #999;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2>Stocks</h2>
+<table>
+    <tr>
+        <th>Prod. ID</th>
+        <th>Qty</th>
+    </tr>
+
+    {{#stocks}}
+        <tr>
+            <td>{{productId}}</td>
+            <td>{{qty}}</td>
+        </tr>
+    {{/stocks}}
+
+</table>
+</body>
+</html>

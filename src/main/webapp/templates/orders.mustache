@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Internet Shop</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid #999;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h2>Orders</h2>
+<table>
+    <tr>
+        <th>Order Id</th>
+        <th>Customer Id</th>
+        <th>Employee Id</th>
+        <th>Order date</th>
+    </tr>
+
+    {{#orders}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{customerId}}</td>
+            <td>{{employeeId}}</td>
+            <td>{{orderDate}}</td>
+        </tr>
+    {{/orders}}
+
+</table>
+</body>
+</html>

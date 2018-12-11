@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.c3p0.idle_test_period">3600</property>
+        <property name="hibernate.max_fetch_depth">3</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="connection.url">
+            jdbc:sqlserver://DESKTOP-CB6NP8R\SQLEXPRESS:1433;database=InternetShopDB;integratedSecurity=true
+        </property>
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+        <mapping class="com.github.ovchingus.model.Employees"/>
+        <mapping class="com.github.ovchingus.model.EmployeesInfo"/>
+        <mapping class="com.github.ovchingus.model.Customers"/>
+        <mapping class="com.github.ovchingus.model.OrderDetails"/>
+        <mapping class="com.github.ovchingus.model.Orders"/>
+        <mapping class="com.github.ovchingus.model.ProductDetails"/>
+        <mapping class="com.github.ovchingus.model.Products"/>
+        <mapping class="com.github.ovchingus.model.Stocks"/>
+        <mapping class="com.github.ovchingus.model.IncomePerMonthView"/>
+
+    </session-factory>
+</hibernate-configuration>
